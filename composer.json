@@ -15,7 +15,7 @@
     ],
     "require": {
         "php" : ">=7.2.0",
-        "phpoffice/phpspredsheet" : "@stable"
+        "phpoffice/phpspreadsheet" : "@stable"
     },
     "autoload" : {
         "psr-4": {
