@@ -1,0 +1,25 @@
+{
+    "name": "osynapsy.net/osynapsy-etl",
+    "version": "0.1",
+    "homepage": "http://www.osynapsy.net/etl",
+    "type": "library",
+    "description": "Osynapsy bootstrap components library",
+    "keywords": ["Osynapsy", "Etl library"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pietro Celeste",
+            "email": "p.celeste@osynapsy.net",
+            "homepage": "https://github.com/osynapsy/osynapsy-etl/wiki"
+        }
+    ],
+    "require": {
+        "php" : ">=7.2.0",
+        "phpoffice/phpspredsheet" : "@stable"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Osynapsy\\Etl\\": "src/"
+        }
+    }
+}
