@@ -1,5 +1,5 @@
 {
-    "name": "osynapsy.net/osynapsy-etl",
+    "name": "osynapsy/osynapsy-etl",
     "version": "0.1",
     "homepage": "http://www.osynapsy.net/etl",
     "type": "library",
