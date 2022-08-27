@@ -3,7 +3,7 @@
 /*
  * This file is part of the Osynapsy package.
  *
- * (c) Pietro Celeste <p.celeste@osynapsy.org>
+ * (c) Pietro Celeste <p.celeste@osynapsy.net>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,9 +12,9 @@
 namespace Osynapsy\Etl\Excel;
 
 class Import extends Prototype
-{        
+{
     public function import($table, $fields, $data, array $constant = [])
-    {        
+    {
         if (empty($table)) {
             $this->error[] = 'Table is empty';
         }
@@ -27,7 +27,7 @@ class Import extends Prototype
         //  Loop through each row of the worksheet in turn
         $insert = 0;
         //die(print_r($data,true));
-        foreach ($data as $k => $rec) { 
+        foreach ($data as $k => $rec) {
             if (empty($rec)) {
                 continue;
             }
@@ -38,11 +38,11 @@ class Import extends Prototype
                 }
                 $sqlParams[$field] = !empty($rec[0][$column]) ? $rec[0][$column] : null ;
             }
-            
+
             foreach($constant as $field => $value) {
                 $sqlParams[$field] = $value;
             }
-            
+
             if (!empty($sqlParams)){
                 try {
                     $this->db->insert($table, $sqlParams);
@@ -52,7 +52,7 @@ class Import extends Prototype
                 }
             }
         }
-        
+
         return $insert;
-    }        
+    }
 }

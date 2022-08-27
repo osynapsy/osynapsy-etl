@@ -3,7 +3,7 @@
 /*
  * This file is part of the Osynapsy package.
  *
- * (c) Pietro Celeste <p.celeste@osynapsy.org>
+ * (c) Pietro Celeste <p.celeste@osynapsy.net>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,10 +12,10 @@
 namespace Osynapsy\Etl\Excel;
 
 class Export extends Prototype
-{           
+{
     public function exec(array $data, $title = 'Data export', $basePath = '/upload/export/')
     {
-        $xls = $this->buildXls($title);                        
+        $xls = $this->buildXls($title);
         function getColumnId($n) {
             $l = range('A','Z');
             if ($n <= 26) {
@@ -25,7 +25,7 @@ class Export extends Prototype
             $i = (($n - $r) / 26) - (empty($r) ? 1 : 0);
             return getColumnId($i).(!empty($r) ? getColumnId($r) : 'Z');
         }
-        
+
         for ($i = 0; $i < count($data); $i++) {
             $j = 0;
             foreach ($data[$i] as $k => $v) {
@@ -44,7 +44,7 @@ class Export extends Prototype
                 $j++;
             }
         }
-        
+
         $xls->getActiveSheet()->setTitle($title);
         //Generate filename
         $filename  = $basePath;
@@ -57,5 +57,5 @@ class Export extends Prototype
         $writer->save($_SERVER['DOCUMENT_ROOT'].$filename);
         //return filename
         return $filename;
-    }        
+    }
 }
