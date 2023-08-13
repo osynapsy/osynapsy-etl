@@ -11,6 +11,7 @@
 
 namespace Osynapsy\Etl;
 
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class XlsToArray
 {
@@ -31,8 +32,8 @@ class XlsToArray
     public function loadExcel($fileName, $grabNumRow = null)
     {
         try {
-            $fileType = \PhpOffice\PhpSpreadsheet\IOFactory::identify($fileName);
-            $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($fileType);
+            $fileType = IOFactory::identify($fileName);
+            $reader = IOFactory::createReader($fileType);
             switch($fileType) {
                 case 'CSV':
                     if (!is_null($this->delimiter)) {

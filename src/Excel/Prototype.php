@@ -26,9 +26,8 @@ class Prototype
         'col' => 0
     ];
 
-    public function __construct($db)
-    {
-        $this->db = $db;
+    public function __construct($creator = 'Osynapsy', $subject = 'Data export', $description = '')
+    {        
         $this->xls = new Spreadsheet();
         $this->xls->getProperties()->setCreator("Osynapsy");
         $this->xls->getProperties()->setLastModifiedBy("Osynapsy");
@@ -46,11 +45,6 @@ class Prototype
         } catch(\Exception $e) {
             return $e->getMessage();
         }
-    }
-
-    public function getDb()
-    {
-        return $this->db;
     }
 
     public function getDimension()

@@ -16,6 +16,7 @@ class Export extends Prototype
     public function exec(array $data, $title = 'Data export', $basePath = '/upload/export/')
     {
         $xls = $this->buildXls($title);
+        
         function getColumnId($n) {
             $l = range('A','Z');
             if ($n <= 26) {
