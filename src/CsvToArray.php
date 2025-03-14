@@ -18,7 +18,7 @@ class CsvToArray
         'col' => 0
     ];
 
-    public function loadFile($filename, $delimiter = ';')
+    public function loadFile($filename, $delimiter = ',')
     {
         try {
             $this->validateFile($filename);
@@ -27,17 +27,17 @@ class CsvToArray
             while($row = fgetcsv($filehandler, null, $delimiter)) {
                $this->max['col'] = max($this->max['col'], count($row));
                $dataset[] = $row;
-            }                         
+            }
             $this->max['row'] = count($dataset);
             return $dataset;
         } catch (\Exception $e) {
             return $e->getMessage();
         }
     }
-    
+
     protected function openFile($filename)
     {
-        
+
         return fopen($filename, 'r');
     }
 
