@@ -1,6 +1,6 @@
 {
     "name": "osynapsy/osynapsy-etl",
-    "version": "0.2",
+    "version": "0.3",
     "homepage": "http://www.osynapsy.net/etl",
     "type": "library",
     "description": "Osynapsy bootstrap components library",
@@ -15,6 +15,7 @@
     ],
     "require": {
         "php" : ">=7.2.0",
+        "osynapsy/osynapsy-assert" : "@stable",
         "phpoffice/phpspreadsheet" : "@stable",
         "openspout/openspout" : "@stable"
     },
