@@ -1,6 +1,6 @@
 {
     "name": "osynapsy/osynapsy-etl",
-    "version": "0.3",
+    "version": "0.4",
     "homepage": "http://www.osynapsy.net/etl",
     "type": "library",
     "description": "Osynapsy bootstrap components library",
