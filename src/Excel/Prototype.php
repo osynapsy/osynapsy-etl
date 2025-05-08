@@ -40,6 +40,7 @@ class Prototype
         try {
             $fileType = IOFactory::identify($fileName);
             $reader = IOFactory::createReader($fileType);
+            $reader->setReadDataOnly(true);
             $excel = $reader->load($fileName);
             return $excel;
         } catch(\Exception $e) {
@@ -67,6 +68,7 @@ class Prototype
         try {
             $fileType = IOFactory::identify($fileName);
             $reader = IOFactory::createReader($fileType);
+            $reader->setReadDataOnly(true);
             switch($fileType) {
                 case 'CSV':
                     if (!is_null($this->delimiter)) {
