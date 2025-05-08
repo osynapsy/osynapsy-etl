@@ -37,7 +37,6 @@ class CsvToArray
 
     protected function openFile($filename)
     {
-
         return fopen($filename, 'r');
     }
 
