@@ -1,0 +1,24 @@
+{
+    "name": "osynapsy/osynapsy-assert",
+    "version": "1.0",
+    "homepage": "http://www.osynapsy.net/assert",
+    "type": "library",
+    "description": "Assert library",
+    "keywords": ["Osynapsy", "Assert"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pietro Celeste",
+            "email": "p.celeste@osynapsy.net",
+            "homepage": "https://github.com/osynapsy/osynapsy-assert/wiki"
+        }
+    ],
+    "require": {
+        "php" : ">=7.2.0"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Osynapsy\\Assert\\": "src/"
+        }
+    }
+}
